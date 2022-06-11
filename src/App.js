@@ -86,7 +86,7 @@ function App() {
           <h1>Ваш список задач!</h1>
           <h2>Добавьте задачу!</h2>
           <div className="err">{isInput && 'Поле не может быть пустым!'}</div>
-          <Input text={value} textTodo={textTodo} blur={blur}/>
+          <Input value={value} textTodo={textTodo} blur={blur}/>
           <Button onClick={addTodo}>Добавить задачу</Button>
           <TodoList todos={todos} />
         </div>

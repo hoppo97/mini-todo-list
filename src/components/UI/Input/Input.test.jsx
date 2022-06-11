@@ -2,14 +2,14 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {Input} from './Input';
 
-const onChange = jest.fn();
+const textTodo = jest.fn();
 
 describe('Input component', () => {
   it('onChange works', () => {
-    render(<Input value='' onChange={onChange} />);
+    render(<Input value="" textTodo={textTodo} />);
     
     userEvent.type(screen.getByRole('textbox'), 'React');
 
-    expect(onChange).toHaveBeenCalledTimes(5);
+    expect(textTodo).toHaveBeenCalledTimes(5);
   })
 });
