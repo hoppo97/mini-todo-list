@@ -1,0 +1,27 @@
+.addTask {
+  background: rgb(93, 88, 88);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.all {
+  
+}  
+
+.green {
+  background-color: #68ce76;
+  
+  &:hover {
+    background-color: #287d34;
+  }
+} 
+
+.blue {
+  background-color: #495dcb;
+  &:hover {
+    background-color: #1931b6;
+  }
+} 

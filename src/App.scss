@@ -1,0 +1,34 @@
+.App {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto; 
+  text-align: center;
+  background-color:#222326;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.err {
+  height: 10px;
+  margin-bottom: 5px;
+  font-size: 9px;
+  color: red;
+}
+
+h1 {
+  margin: 0;
+}
+
+input {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+.filterButtons {
+  display: flex;
+  justify-content: center;
+}

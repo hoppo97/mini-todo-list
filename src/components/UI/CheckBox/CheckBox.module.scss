@@ -1,0 +1,31 @@
+.bgc {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  color: #fff;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+  margin-right: 10px;
+}
+
+.checked {
+  background-color: #2db8e2;
+}
+
+
+.CheckBox {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.labelChecked {
+  text-decoration: line-through;
+}
+
+.labelUnChecked {
+
+}
