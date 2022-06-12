@@ -4,10 +4,8 @@ import AppContext from '../../../context';
 import styles from './CheckBox.module.scss';
 
 
-export const CheckBox = ({isComplited, todo}) => {
-  const {toggleChecked} = React.useContext(AppContext);
-
-
+export const CheckBox = React.memo(({isComplited, todo, toggleChecked}) => {
+  // const {toggleChecked} = React.useContext(AppContext);
 
   return (
     <div className={styles.сheckBox}>
@@ -15,6 +13,6 @@ export const CheckBox = ({isComplited, todo}) => {
       <label className={isComplited ? styles.labelChecked : styles.labelUnChecked}>{todo.text}</label>
     </div>
   )
-}
+});
 
 

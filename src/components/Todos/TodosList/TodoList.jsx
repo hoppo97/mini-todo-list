@@ -21,18 +21,19 @@ const filter = [
   }, 
 ];
 
-export const TodoList = ({todos}) => {
+
+export const TodoList = ({todos, toggleChecked}) => {
   const [isActive, setIsActive] = React.useState('all');
   const result = isActive === 'all' ? todos :  todos.filter(item => item.completed === isActive);
-
   if(!todos) return null;
+
   return (
     <>
       <div className={styles.todosList}>
         {filter.map((item) => (
             <Button
               key={item.id}
-              type={isActive === item.filter ? 'active' : ""}
+              type={isActive === item.filter ? 'active' : ''}
               onClick={() => setIsActive(item.filter)}
             >
               {item.title}
@@ -41,7 +42,7 @@ export const TodoList = ({todos}) => {
       </div>
       <ul className={styles.todosList}>
         {result.length > 0 ? result.map(item => (
-            <TodoItem key={item.id} todo={item}/>
+            <TodoItem key={item.id} todo={item} toggleChecked={toggleChecked}/>
           ) 
         ) : <div>Пусто</div> }
       </ul>
