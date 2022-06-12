@@ -51,6 +51,7 @@ function App() {
   };
 
   const toggleChecked = (todoId) => {
+    console.log(1);
     setTodos(
       todos.map(todo => {
         if(todo.id !== todoId) return todo;
@@ -85,8 +86,10 @@ function App() {
           <h1>Ваш список задач!</h1>
           <h2>Добавьте задачу!</h2>
           <div className="err">{isInput && 'Поле не может быть пустым!'}</div>
-          <Input value={value} setNameTodo={setNameTodo} blur={blur}/>
-          <Button onClick={addTodo}>Добавить задачу</Button>
+          <div className="addTodo">
+            <Input value={value} setNameTodo={setNameTodo} blur={blur}/>
+            <Button onClick={addTodo}>Добавить задачу</Button>
+          </div>
           <TodoList todos={todos} />
         </div>
     </AppContext.Provider>

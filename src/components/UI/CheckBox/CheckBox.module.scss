@@ -8,24 +8,27 @@
   margin-right: 10px;
 }
 
-.checked {
-  background-color: #2db8e2;
-}
-
-
-.CheckBox {
+.сheckBox {
   display: flex;
   align-items: center;
   height: 30px;
   justify-content: center;
   width: 100%;
+  
+  svg {
+    cursor: pointer;
+  }
+ 
 }
 
+.checked {
+  background-color: #2db8e2;
+  pointer-events: none;
+  svg {
+    cursor: default;
+  }
+}
 
 .labelChecked {
   text-decoration: line-through;
-}
-
-.labelUnChecked {
-
 }
