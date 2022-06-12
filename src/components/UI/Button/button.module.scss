@@ -1,14 +1,19 @@
-.addTask {
+
+.btn {
   background: #ffffff;
   border: 1px solid #2db8e2;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 12px;
   transition: background-color 0.2s ease-in-out;
-  font-size: 12px;
+  font-size: 10px;
   &:hover {
     background-color: #2db8e2;
   }
+}
+
+.addBtn {
+  font-size: 14px;
 }
 
 .active {

@@ -88,7 +88,7 @@ function App() {
           <div className="err">{isInput && 'Поле не может быть пустым!'}</div>
           <div className="addTodo">
             <Input value={value} setNameTodo={setNameTodo} blur={blur}/>
-            <Button onClick={addTodo}>Добавить задачу</Button>
+            <Button type={'addBtn'} onClick={addTodo}>Добавить задачу</Button>
           </div>
           <TodoList todos={todos} />
         </div>
