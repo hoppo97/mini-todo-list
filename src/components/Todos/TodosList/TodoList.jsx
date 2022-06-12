@@ -3,8 +3,6 @@ import {TodoItem} from '../TodoItem';
 import { Button } from '../../UI/Button';
 import styles from './TodosList.module.scss';
 
-
-
 const filter = [
   {
     id: 1,
