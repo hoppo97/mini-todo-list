@@ -26,7 +26,6 @@ const TODOS = [
 
 
 function App() {
-
   const [todos, setTodos] = React.useState([]);
   const [value, setValue] = React.useState('');
   const [isInput, setIsInput] = React.useState(false);
@@ -64,7 +63,7 @@ function App() {
     );
   };
 
-  const textTodo = (e) => {
+  const setNameTodo = (e) => {
       setValue(e.target.value);
       value ? setIsInput(false) : setIsInput(true);
   };
@@ -86,7 +85,7 @@ function App() {
           <h1>Ваш список задач!</h1>
           <h2>Добавьте задачу!</h2>
           <div className="err">{isInput && 'Поле не может быть пустым!'}</div>
-          <Input value={value} textTodo={textTodo} blur={blur}/>
+          <Input value={value} setNameTodo={setNameTodo} blur={blur}/>
           <Button onClick={addTodo}>Добавить задачу</Button>
           <TodoList todos={todos} />
         </div>
