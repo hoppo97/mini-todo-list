@@ -65,6 +65,7 @@ function App() {
   };
 
   const setNameTodo = (e) => {
+      console.log(e.target.value);
       setValue(e.target.value);
       value ? setIsInput(false) : setIsInput(true);
   };
@@ -84,7 +85,7 @@ function App() {
         <div className="App">
           <h1>Ваш список задач!</h1>
           <h2>Добавьте задачу!</h2>
-          <div className="err">{isInput && 'Поле не может быть пустым!'}</div>
+          <div className="err">{isInput &&  'Поле не может быть пустым!'}</div>
           <div className="addTodo">
             <Input value={value} setNameTodo={setNameTodo} blur={blur}/>
             <Button type={'addBtn'} onClick={addTodo}>Добавить задачу</Button>

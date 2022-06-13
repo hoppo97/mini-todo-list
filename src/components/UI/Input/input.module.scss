@@ -2,7 +2,10 @@
   border: none;
   background: none;
   outline: none;
+  color:rgb(155, 148, 148);
+  border-bottom: 1px solid rgba(54, 167, 201, 0.2);
 
-  border: 1px solid #36a7c9;
-  border-radius: 5px;
+  &::placeholder {
+    color: rgb(155, 148, 148);
+  }
 }
