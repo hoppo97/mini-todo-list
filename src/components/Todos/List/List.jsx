@@ -1,27 +1,30 @@
 import React from 'react'
-import {TodoItem} from '../TodoItem';
+import {Tasks} from '../Tasks';
 import { Button } from '../../UI/Button';
-import styles from './TodosList.module.scss';
+import styles from './List.module.scss';
 
 const filter = [
   {
     id: 1,
     title:'Все задачи',
-    filter: 'all'
+    filter: 'all', 
+    color: 'red'
   },
   {
     id: 2,
     title:'Выполненые задачи',
-    filter: true
+    filter: true,
+    color: 'blue'
   },
   {
     id: 3,
     title:'Активные задачи',
-    filter: false
+    filter: false,
+    color: 'green'
   }, 
 ];
 
-export const TodoList = ({todos}) => {
+export const List = ({todos}) => {
   const [isActive, setIsActive] = React.useState('all');
   const result = isActive === 'all' ? todos :  todos.filter(item => item.completed === isActive);
 
@@ -32,7 +35,7 @@ export const TodoList = ({todos}) => {
         {filter.map((item) => (
             <Button
               key={item.id}
-              type={isActive === item.filter ? 'active' : ""}
+              type={isActive === item.filter ? 'active' : item.color}
               onClick={() => setIsActive(item.filter)}
             >
               {item.title}
@@ -41,7 +44,7 @@ export const TodoList = ({todos}) => {
       </div>
       <ul className={styles.todosList}>
         {result.length > 0 ? result.map(item => (
-            <TodoItem key={item.id} todo={item}/>
+            <Tasks key={item.id} task={item}/>
           ) 
         ) : <div>Пусто</div> }
       </ul>

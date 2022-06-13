@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react';
-import { TodoList  } from './TodoList';
+import { List  } from './List';
 
 const TODOS = [
   {
@@ -21,7 +21,7 @@ const TODOS = [
 
 describe('TodoList component', () => {
   it('TodoList renders', () => {
-    render(<TodoList todos={TODOS} />);
+    render(<List todos={TODOS} />);
 
 
     expect(screen.getByRole('list')).toBeInTheDocument();
@@ -29,13 +29,13 @@ describe('TodoList component', () => {
   });
 
   it('TodoList renders without data', () => {
-    render(<TodoList />);
+    render(<List />);
 
     expect(screen.queryByRole('ul')).toBeNull();
   });
 
   it('TodoList snapshots renders without data', () => {
-    const view = render(<TodoList todos={TODOS}/>);
+    const view = render(<List todos={TODOS}/>);
 
     expect(view).toMatchSnapshot();
   })

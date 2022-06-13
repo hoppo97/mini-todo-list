@@ -2,7 +2,7 @@ import './App.scss';
 import React from 'react';
 import AppContext from './context';
 
-import {TodoList} from './components/Todos/TodosList';
+import {List} from './components/Todos/List';
 import {Input} from './components/UI/Input';
 import {Button} from './components/UI/Button';
 
@@ -90,7 +90,7 @@ function App() {
             <Input value={value} setNameTodo={setNameTodo} blur={blur}/>
             <Button type={'addBtn'} onClick={addTodo}>Добавить задачу</Button>
           </div>
-          <TodoList todos={todos} />
+          <List todos={todos} />
         </div>
     </AppContext.Provider>
   )

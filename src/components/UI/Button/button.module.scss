@@ -1,21 +1,52 @@
 
 .btn {
   background: #ffffff;
-  border: 1px solid #2db8e2;
+  color: #000;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 12px;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   font-size: 10px;
+  
   &:hover {
-    background-color: #2db8e2;
+    background-color: #36a7c9;
+    color: #fff;
   }
 }
 
 .addBtn {
+  border: 1px solid #2db8e2;
+  color: #000;
   font-size: 14px;
 }
 
 .active {
   background-color: #2db8e2;
+  border: 1px solid #2db8e2;
+  color: #fff;
+}
+
+.blue {
+  border: 1px solid #4747fd;
+  &:hover {
+    background-color: #3f3fc7;
+    color: #fff;
+  }
+}
+
+.red {
+  border: 1px solid #de7a7a;
+  &:hover {
+    background-color: #a65b5b;
+    color: #fff;
+  }
+}
+
+.green {
+  border: 1px solid #198919;
+  &:hover {
+    background-color: #187518;
+    color: #fff;
+  }
 }
