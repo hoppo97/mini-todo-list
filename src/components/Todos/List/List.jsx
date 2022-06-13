@@ -31,7 +31,7 @@ export const List = ({todos}) => {
   if(!todos) return null;
   return (
     <>
-      <div className={styles.todosList}>
+      <div>
         {filter.map((item) => (
             <Button
               key={item.id}
@@ -42,7 +42,7 @@ export const List = ({todos}) => {
             </Button>
           ))}
       </div>
-      <ul className={styles.todosList}>
+      <ul>
         {result.length > 0 ? result.map(item => (
             <Tasks key={item.id} task={item}/>
           ) 

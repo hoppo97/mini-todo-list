@@ -4,7 +4,7 @@ import styles from './Tasks.module.scss';
 
 export const Tasks = ({task}) => {
   return (
-    <li className={styles.todoItem}>
+    <li className={styles.tasks}>
       <CheckBox isComplited={task.completed} task={task} />
     </li>
   )
