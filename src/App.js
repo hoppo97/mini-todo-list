@@ -26,18 +26,18 @@ const TODOS = [
 
 
 function App() {
-  const [todos, setTodos] = React.useState([]);
+  const [tasks, setTasks] = React.useState([]);
   const [value, setValue] = React.useState('');
   const [isInput, setIsInput] = React.useState(false);
  
   React.useEffect(() => {
-    setTodos(TODOS);
+    setTasks(TODOS);
   },[]);
 
   const addTodo = () => {
     if(value.trim().length){
-      setTodos([
-        ...todos,
+      setTasks([
+        ...tasks,
         {
           id: Math.floor(Math.random() * 100000),
           text: value,
@@ -52,8 +52,8 @@ function App() {
 
   const toggleChecked = (todoId) => {
     console.log(1);
-    setTodos(
-      todos.map(todo => {
+    setTasks(
+      tasks.map(todo => {
         if(todo.id !== todoId) return todo;
 
         return {
@@ -79,7 +79,6 @@ function App() {
 
   return (
     <AppContext.Provider value={{
-      todos,
       toggleChecked,
     }}>
         <div className="App">
@@ -90,7 +89,7 @@ function App() {
             <Input value={value} setNameTodo={setNameTodo} blur={blur}/>
             <Button type={'addBtn'} onClick={addTodo}>Добавить задачу</Button>
           </div>
-          <List todos={todos} />
+          <List tasks={tasks} />
         </div>
     </AppContext.Provider>
   )

@@ -5,11 +5,11 @@ import styles from './List.module.scss';
 import {filter} from './../../../utils.js'
 
 
-export const List = ({todos}) => {
+export const List = ({tasks}) => {
   const [isActive, setIsActive] = React.useState('all');
-  const result = isActive === 'all' ? todos :  todos.filter(item => item.completed === isActive);
+  const result = isActive === 'all' ? tasks :  tasks.filter(item => item.completed === isActive);
 
-  if(!todos) return null;
+  if(!tasks) return null;
   return (
     <>
       <div>
