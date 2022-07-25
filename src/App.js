@@ -28,9 +28,10 @@ const TODOS = [
 function App() {
   const [tasks, setTasks] = React.useState([]);
   const [value, setValue] = React.useState('');
-  const [isInput, setIsInput] = React.useState(false);
- 
+  const [isInput, setIsInput] = React.useState(null);
+
   React.useEffect(() => {
+    setIsInput(false)
     setTasks(TODOS);
   },[]);
 
@@ -66,11 +67,11 @@ function App() {
   const setNameTodo = (e) => {
       console.log(e.target.value);
       setValue(e.target.value);
-      value ? setIsInput(false) : setIsInput(true);
+      value.length >= 0 ? setIsInput(false) : setIsInput(true);
   };
 
   const onKeyPress = (e) => {
-    e.code === 'Enter' && addTodo();
+    e.code === 'Enter' && addTodo()
   }
 
   return (

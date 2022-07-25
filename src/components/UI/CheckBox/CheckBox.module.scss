@@ -8,16 +8,8 @@
   margin-right: 10px;
 }
 
-.сheckBox {
-  display: flex;
-  align-items: center;
-  height: 30px;
-  justify-content: center;
-  width: 100%;
-  
-  svg {
-    cursor: pointer;
-  }
+svg {
+  cursor: pointer;
 }
 
 .checked {

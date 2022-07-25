@@ -3,10 +3,10 @@ li {
 }
 
 .tasks {
+  display: flex;
+  align-items: center;
+  height: 30px;
   width: 100%;
-  margin: 0 auto; 
-  text-align: center;
-  position: relative;
 }
 
 

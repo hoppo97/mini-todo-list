@@ -5,6 +5,11 @@
   color:rgb(155, 148, 148);
   border-bottom: 1px solid rgba(54, 167, 201, 0.2);
 
+  transition: border-bottom 0.2s linear;
+
+  &:focus {
+    border-bottom: 1px solid rgba(54, 167, 201);
+  }
   &::placeholder {
     color: rgb(155, 148, 148);
   }
