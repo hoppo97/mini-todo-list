@@ -6,9 +6,7 @@ import styles from './CheckBox.module.scss';
 
 export const CheckBox = ({isComplited, task}) => {
   const {toggleChecked} = React.useContext(AppContext);
-
-
-
+  
   return (
     <div className={styles.сheckBox}>
       <BsCheck size={24} className={`${styles.bgc } ${isComplited ? styles.checked : null}`} onClick={() => toggleChecked(task.id)}/>

@@ -1,9 +1,15 @@
 import React from 'react'
 import styles from './input.module.scss';
 
-export const Input = ({value, setNameTodo, blur, placeholder = 'Введите название задачи'}) => {
+export const Input = ({value, setNameTodo, placeholder = 'Введите название задачи', onKeyPress}) => {
   return (
-      <input className={styles.input} placeholder={placeholder} value={value} onBlur={blur} onChange={setNameTodo} type="text" />
+      <input 
+        className={styles.input} 
+        placeholder={placeholder} 
+        value={value} 
+        onKeyPress={onKeyPress} 
+        onChange={setNameTodo} type="text" 
+      />
   )
 }
 

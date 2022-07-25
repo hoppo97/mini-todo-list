@@ -7,7 +7,7 @@ import {filter} from './../../../utils.js'
 
 export const List = ({tasks}) => {
   const [isActive, setIsActive] = React.useState('all');
-  const result = isActive === 'all' ? tasks :  tasks.filter(item => item.completed === isActive);
+  const result = isActive === 'all' ? tasks : tasks.filter(item => item.completed === isActive);
 
   if(!tasks) return null;
   return (

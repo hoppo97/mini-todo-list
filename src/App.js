@@ -51,7 +51,6 @@ function App() {
   };
 
   const toggleChecked = (todoId) => {
-    console.log(1);
     setTasks(
       tasks.map(todo => {
         if(todo.id !== todoId) return todo;
@@ -70,13 +69,9 @@ function App() {
       value ? setIsInput(false) : setIsInput(true);
   };
 
-  const blur = (e) => {
-    if(value){
-      setIsInput(false);
-    } else {
-      setIsInput(true);
-    }
-  };
+  const onKeyPress = (e) => {
+    e.code === 'Enter' && addTodo();
+  }
 
   return (
     <AppContext.Provider value={{
@@ -87,7 +82,7 @@ function App() {
           <h2>Добавьте задачу!</h2>
           <div className="err">{isInput &&  'Поле не может быть пустым!'}</div>
           <div className="addTodo">
-            <Input value={value} setNameTodo={setNameTodo} blur={blur}/>
+            <Input value={value} setNameTodo={setNameTodo} onKeyPress={onKeyPress}/>
             <Button type={'addBtn'} onClick={addTodo}>Добавить задачу</Button>
           </div>
           <List tasks={tasks} />
